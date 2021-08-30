@@ -5,6 +5,8 @@ import java.io.Serializable;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 import br.com.tema.hearthstone.carta.enums.Classe;
@@ -16,6 +18,7 @@ public class Carta implements Serializable {
 	private static final long serialVersionUID = -7992114802944042977L;
 
 	@Id
+	@GeneratedValue(strategy = GenerationType.SEQUENCE)
 	private Long id;
 	
 	private String nome;

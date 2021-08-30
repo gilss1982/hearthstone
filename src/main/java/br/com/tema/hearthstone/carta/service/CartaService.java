@@ -52,7 +52,7 @@ public class CartaService {
 		return repo.findAll(pageable).getContent();
 	}
 	
-	public Carta add(Carta carta) {
+	public Carta criar(Carta carta) {
 		if(carta==null) {
 			throw new RuntimeException("A carta não pode ser nula");
 		}
